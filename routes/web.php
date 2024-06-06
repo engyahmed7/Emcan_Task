@@ -1,9 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\ContactController;
-use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,9 +19,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('courses', CourseController::class)->middleware(['auth']);
 
-Route::get('/contact', [ContactController::class, 'showForm']);
-Route::post('/contact', [ContactController::class, 'sendEmail'])->name('contact.send');
+
+Route::resource('courses', CourseController::class)->middleware('auth');
+
+Route::get('contact', [ContactController::class, 'show'])->name('contact.show');
+Route::post('contact', [ContactController::class, 'send'])->name('contact.send');
+
+
 
 require __DIR__.'/auth.php';
