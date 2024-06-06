@@ -67,13 +67,19 @@ Update the necessary variables in your `.env` file, particularly the database an
 php artisan key:generate
 ```
 
-### Step 5: Run Migrations
+### Step 5: Install Vite
+
+```bash
+npm install vite@latest
+```
+
+### Step 6: Run Migrations
 
 ```bash
 php artisan migrate
 ```
 
-### Step 6: Serve the Application
+### Step 7: Serve the Application
 
 ```bash
 php artisan serve
