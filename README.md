@@ -136,7 +136,7 @@ Open your browser and navigate to `http://localhost:8000`.
 
 You can watch the demo video for the Learning Management System below:
 
-[![Course Management Application Demo]](https://www.youtube.com/watch?v=PORo2McCbPI)
+[Course Management Application Demo](https://www.youtube.com/watch?v=PORo2McCbPI)
 
 
 ## Contribution
